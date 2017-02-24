@@ -1,0 +1,13 @@
+= PrimeFaces Demo project
+
+This project demonstrates that async OutputPanels don't share the ViewScope with view that contains them.
+
+To run this test, build the project, run the app with the tomee-maven-plugin and go to http://localhost:8080:
+
+----
+mvn clean package tomee:run
+----
+
+The page shows a property `id` of the `TestController` that is initialized with a random value.
+
+It is shown once synchronously within a normal Panel, and then asynchronously within an OutputPanel.
